@@ -1,44 +1,47 @@
 <div class="controls-container">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>Điều Khiển Giám Sát</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Điều Khiển Giám Sát</h5>
+    </div>
+    <div class="card-body">
       <div class="controls-buttons">
         <button
-          mat-raised-button
-          color="primary"
+          class="btn btn-primary me-2"
           [disabled]="isMonitoring"
           (click)="startMonitor()"
         >
-          <mat-icon>play_arrow</mat-icon>
+          <i class="bi bi-play-fill"></i>
           Bắt Đầu Giám Sát
         </button>
 
         <button
-          mat-raised-button
-          color="warn"
+          class="btn btn-danger me-2"
           [disabled]="!isMonitoring"
           (click)="stopMonitor()"
         >
-          <mat-icon>stop</mat-icon>
+          <i class="bi bi-stop-fill"></i>
           Dừng Giám Sát
         </button>
 
-        <button mat-raised-button color="accent" (click)="scanAll()">
-          <mat-icon>search</mat-icon>
+        <button class="btn btn-info" (click)="scanAll()">
+          <i class="bi bi-search"></i>
           Quét Thủ Công
         </button>
       </div>
 
-      <div class="status-indicator">
+      <div class="status-indicator mt-3">
         <div class="status-badge" [class.active]="isMonitoring">
-          <mat-icon>{{
-            isMonitoring ? "radio_button_checked" : "radio_button_unchecked"
-          }}</mat-icon>
+          <i
+            class="bi"
+            [ngClass]="
+              isMonitoring
+                ? 'bi-record-fill text-success'
+                : 'bi-record text-secondary'
+            "
+          ></i>
           <span>{{ isMonitoring ? "Đang giám sát" : "Đã dừng giám sát" }}</span>
         </div>
       </div>
-    </mat-card-content>
-  </mat-card>
+    </div>
+  </div>
 </div>

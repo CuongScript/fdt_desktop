@@ -28,16 +28,16 @@ button {
   align-items: center;
   padding: 8px 16px;
   border-radius: 24px;
-  background-color: #f5f5f5;
-  color: rgba(0, 0, 0, 0.6);
+  background-color: #f8f9fa;
+  color: #6c757d;
   transition: all 0.3s ease;
 
-  mat-icon {
+  i {
     margin-right: 8px;
   }
 
   &.active {
-    background-color: #e8f5e9;
-    color: #2e7d32;
+    background-color: #d4edda;
+    color: #155724;
   }
 }

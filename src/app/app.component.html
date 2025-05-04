@@ -169,22 +169,31 @@
 </style>
 
 <div class="app-container">
-  <mat-toolbar color="primary" class="app-toolbar">
-    <span class="app-title">EVNGENCO2 File Monitor</span>
-    <div class="spacer"></div>
-    <nav>
-      <a mat-button routerLink="/rules" routerLinkActive="active">
-        <mat-icon>rule</mat-icon>
-        Quy Tắc
-      </a>
-      <a mat-button routerLink="/logs" routerLinkActive="active">
-        <mat-icon>receipt_long</mat-icon>
-        Nhật Ký
-      </a>
-    </nav>
-  </mat-toolbar>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">EVNGENCO2 File Monitor</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" routerLink="/rules" routerLinkActive="active">
+            <i class="bi bi-list-check"></i> Quy Tắc
+          </a>
+          <a class="nav-link" routerLink="/logs" routerLinkActive="active">
+            <i class="bi bi-journal-text"></i> Nhật Ký
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-  <div class="main-content">
+  <div class="container-fluid mt-3">
     <app-controls></app-controls>
     <router-outlet></router-outlet>
   </div>

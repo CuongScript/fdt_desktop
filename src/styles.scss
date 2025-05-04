@@ -1,134 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@use "@angular/material" as mat;
-@use "sass:map";
-
-// Include the common styles for Angular Material
-@include mat.core();
-
-// Define valid M3 palettes using mat.define-palette
-$primary-palette: mat.define-palette(mat.$indigo-palette, 500);
-
-$tertiary-palette: mat.define-palette(mat.$teal-palette, 500);
-
-// Define a basic typography configuration
-$typography-config: (
-  font-family: '"Roboto", "Helvetica Neue", sans-serif',
-  headline-1: (
-    font-size: 96px,
-    font-weight: 300,
-    line-height: 112px,
-    letter-spacing: -1.5px,
-  ),
-  headline-2: (
-    font-size: 60px,
-    font-weight: 300,
-    line-height: 72px,
-    letter-spacing: -0.5px,
-  ),
-  headline-3: (
-    font-size: 48px,
-    font-weight: 400,
-    line-height: 56px,
-    letter-spacing: 0px,
-  ),
-  headline-4: (
-    font-size: 34px,
-    font-weight: 400,
-    line-height: 40px,
-    letter-spacing: 0.25px,
-  ),
-  headline-5: (
-    font-size: 24px,
-    font-weight: 400,
-    line-height: 32px,
-    letter-spacing: 0px,
-  ),
-  headline-6: (
-    font-size: 20px,
-    font-weight: 500,
-    line-height: 32px,
-    letter-spacing: 0.15px,
-  ),
-  subtitle-1: (
-    font-size: 16px,
-    font-weight: 400,
-    line-height: 24px,
-    letter-spacing: 0.15px,
-  ),
-  subtitle-2: (
-    font-size: 14px,
-    font-weight: 500,
-    line-height: 24px,
-    letter-spacing: 0.1px,
-  ),
-  body-1: (
-    font-size: 16px,
-    font-weight: 400,
-    line-height: 24px,
-    letter-spacing: 0.5px,
-  ),
-  body-2: (
-    font-size: 14px,
-    font-weight: 400,
-    line-height: 20px,
-    letter-spacing: 0.25px,
-  ),
-  button: (
-    font-size: 14px,
-    font-weight: 500,
-    line-height: 36px,
-    letter-spacing: 1.25px,
-  ),
-  caption: (
-    font-size: 12px,
-    font-weight: 400,
-    line-height: 20px,
-    letter-spacing: 0.4px,
-  ),
-  overline: (
-    font-size: 10px,
-    font-weight: 500,
-    line-height: 20px,
-    letter-spacing: 1.5px,
-  ),
-);
-
-// Create the theme object with the correct properties for Angular Material v19
-$app-theme: mat.define-theme(
-  (
-    color: (
-      theme-type: "light",
-      primary: $primary-palette,
-      tertiary: $tertiary-palette,
-    ),
-    typography: $typography-config,
-    density: 0,
-  )
-);
-
-// Include theme styles for core and each component
-@include mat.all-component-themes($app-theme);
+/* Import Bootstrap CSS */
+@import "bootstrap/scss/bootstrap";
+/* Import Bootstrap Icons */
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
 /* Global styles */
 html,
 body {
   height: 100%;
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
 }
 
-/* Material icons */
-.material-icons {
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-smoothing: antialiased;
-}
+/* Optional: Include additional global styles below */
