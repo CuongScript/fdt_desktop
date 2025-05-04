@@ -1,2 +1,108 @@
 2025-05-04 15:46:09  Bắt đầu quét thủ công...
 2025-05-04 15:46:09  Hoàn thành quét thủ công.
+2025-05-04 15:57:15  Bắt đầu giám sát thư mục: D:\Downloads
+2025-05-04 15:58:06  Bắt đầu quét thủ công...
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:06  Hoàn thành quét thủ công.
+2025-05-04 15:58:10  Bắt đầu quét thủ công...
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:10  Hoàn thành quét thủ công.
+2025-05-04 15:58:11  Bắt đầu quét thủ công...
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:11  Hoàn thành quét thủ công.
+2025-05-04 15:58:12  Bắt đầu quét thủ công...
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Hoàn thành quét thủ công.
+2025-05-04 15:58:12  Bắt đầu quét thủ công...
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
+2025-05-04 15:58:12  Hoàn thành quét thủ công.
+2025-05-04 16:10:26  Bắt đầu giám sát thư mục: D:\Downloads
+2025-05-04 16:11:02  (bỏ qua) 'New folder' không khớp regex='\.pdf$'
+2025-05-04 16:11:04  (bỏ qua) 'test1' không khớp regex='\.pdf$'
+2025-05-04 16:11:42  Bắt đầu giám sát thư mục: D:\Downloads\test1
+2025-05-04 16:11:50  [D:\Downloads\test1→D:\Downloads\test] 'App Form - Credit Transfer.pdf' (regex='\.pdf$')

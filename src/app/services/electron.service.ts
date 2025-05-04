@@ -21,6 +21,17 @@ export class ElectronService {
     return !!this.electronAPI;
   }
 
+  // New method to select a directory
+  async selectDirectory(
+    title: string = 'Select folder'
+  ): Promise<string | null> {
+    if (!this.isElectronAvailable()) {
+      console.error('Electron API not available');
+      return null;
+    }
+    return await this.electronAPI.selectDirectory(title);
+  }
+
   async getRules(): Promise<Rule[]> {
     if (!this.isElectronAvailable()) {
       console.error('Electron API not available');

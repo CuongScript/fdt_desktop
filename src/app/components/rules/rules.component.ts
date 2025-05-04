@@ -43,6 +43,36 @@ export class RulesComponent implements OnInit {
     this.loadRules();
   }
 
+  // New method to select source directory
+  async selectSourceDirectory(): Promise<void> {
+    try {
+      const selectedPath = await this.electronService.selectDirectory(
+        'Chọn thư mục nguồn'
+      );
+      if (selectedPath) {
+        this.ruleForm.get('source')?.setValue(selectedPath);
+      }
+    } catch (error) {
+      this.showMessage('Không thể chọn thư mục nguồn');
+      console.error('Error selecting source directory:', error);
+    }
+  }
+
+  // New method to select destination directory
+  async selectDestinationDirectory(): Promise<void> {
+    try {
+      const selectedPath = await this.electronService.selectDirectory(
+        'Chọn thư mục đích'
+      );
+      if (selectedPath) {
+        this.ruleForm.get('destination')?.setValue(selectedPath);
+      }
+    } catch (error) {
+      this.showMessage('Không thể chọn thư mục đích');
+      console.error('Error selecting destination directory:', error);
+    }
+  }
+
   async loadRules(): Promise<void> {
     try {
       this.rules = await this.electronService.getRules();

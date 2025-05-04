@@ -1,0 +1,9 @@
+{
+  "rules": [
+    {
+      "source": "D:\\Downloads\\test1",
+      "destination": "D:\\Downloads\\test",
+      "pattern": "\\.pdf$"
+    }
+  ]
+}

@@ -11,4 +11,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
   stopMonitor: () => ipcRenderer.invoke('stop-monitor'),
   scanAll: () => ipcRenderer.invoke('scan-all'),
   readLogs: () => ipcRenderer.invoke('read-logs'),
+  selectDirectory: (title: string) =>
+    ipcRenderer.invoke('select-directory', title),
 });

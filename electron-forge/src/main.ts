@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow, ipcMain, dialog } from 'electron';
 import path from 'node:path';
 import started from 'electron-squirrel-startup';
 import { watchFiles, unwatchAll, scanAll, cfg, Rule } from './file-logic';
@@ -13,7 +13,7 @@ const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 900,
-    height: 700,
+    height: 900,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -74,3 +74,21 @@ ipcMain.handle('scan-all', () => scanAll(cfg.rules));
 ipcMain.handle('read-logs', () =>
   require('fs').readFileSync(path.join(process.cwd(), 'logs.txt'), 'utf-8')
 );
+
+// New IPC handler for directory selection dialog
+ipcMain.handle('select-directory', async (event, title: string) => {
+  const window = BrowserWindow.fromWebContents(event.sender);
+  if (!window) return null;
+
+  const { canceled, filePaths } = await dialog.showOpenDialog(window, {
+    title: title || 'Select a folder',
+    properties: ['openDirectory', 'createDirectory'],
+    buttonLabel: 'Select',
+  });
+
+  if (canceled || filePaths.length === 0) {
+    return null;
+  }
+
+  return filePaths[0];
+});

@@ -9,51 +9,71 @@
         <div class="row g-3 mb-3">
           <div class="col-md-4">
             <label for="source" class="form-label">Thư mục nguồn</label>
-            <input
-              type="text"
-              class="form-control"
-              id="source"
-              formControlName="source"
-              placeholder="Đường dẫn thư mục nguồn"
-              [ngClass]="{
-                'is-invalid':
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                id="source"
+                formControlName="source"
+                placeholder="Đường dẫn thư mục nguồn"
+                [ngClass]="{
+                  'is-invalid':
+                    ruleForm.get('source')?.invalid &&
+                    ruleForm.get('source')?.touched
+                }"
+              />
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                (click)="selectSourceDirectory()"
+                title="Chọn thư mục nguồn"
+              >
+                <i class="bi bi-folder2-open"></i>
+              </button>
+              <div
+                class="invalid-feedback"
+                *ngIf="
                   ruleForm.get('source')?.invalid &&
                   ruleForm.get('source')?.touched
-              }"
-            />
-            <div
-              class="invalid-feedback"
-              *ngIf="
-                ruleForm.get('source')?.invalid &&
-                ruleForm.get('source')?.touched
-              "
-            >
-              Vui lòng nhập đường dẫn thư mục nguồn
+                "
+              >
+                Vui lòng nhập đường dẫn thư mục nguồn
+              </div>
             </div>
           </div>
 
           <div class="col-md-4">
             <label for="destination" class="form-label">Thư mục đích</label>
-            <input
-              type="text"
-              class="form-control"
-              id="destination"
-              formControlName="destination"
-              placeholder="Đường dẫn thư mục đích"
-              [ngClass]="{
-                'is-invalid':
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                id="destination"
+                formControlName="destination"
+                placeholder="Đường dẫn thư mục đích"
+                [ngClass]="{
+                  'is-invalid':
+                    ruleForm.get('destination')?.invalid &&
+                    ruleForm.get('destination')?.touched
+                }"
+              />
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                (click)="selectDestinationDirectory()"
+                title="Chọn thư mục đích"
+              >
+                <i class="bi bi-folder2-open"></i>
+              </button>
+              <div
+                class="invalid-feedback"
+                *ngIf="
                   ruleForm.get('destination')?.invalid &&
                   ruleForm.get('destination')?.touched
-              }"
-            />
-            <div
-              class="invalid-feedback"
-              *ngIf="
-                ruleForm.get('destination')?.invalid &&
-                ruleForm.get('destination')?.touched
-              "
-            >
-              Vui lòng nhập đường dẫn thư mục đích
+                "
+              >
+                Vui lòng nhập đường dẫn thư mục đích
+              </div>
             </div>
           </div>
 
@@ -80,9 +100,24 @@
             >
               Vui lòng nhập biểu thức regex
             </div>
-            <small class="form-text text-muted"
-              >Ví dụ: .*\.pdf để tìm file PDF</small
-            >
+            <small class="form-text text-muted">
+              Ví dụ:<br />
+              .*\.pdf để tìm file PDF<br />
+              .*\.jpe?g để tìm file JPEG/JPG<br />
+              .*\.png để tìm file PNG<br />
+              .*\.docx? để tìm file DOC/DOCX<br />
+              .*\.xlsx? để tìm file XLS/XLSX<br />
+              .*_backup_.* để tìm file có chứa '_backup_'<br />
+              ^IMG_\d{{ "{" }}4{{ "}" }}\.jpg$ để tìm ảnh theo định dạng
+              IMG_XXXX.jpg<br />
+              ^data\d{{ "{" }}2{{ "}" }}_.+\.csv$ để tìm file CSV bắt đầu bằng
+              'data' và 2 số<br />
+              .+\.(zip|rar|7z)$ để tìm file nén<br />
+              ^((?!temp).)*$ để tìm file không chứa 'temp'<br />
+              ^\d{{ "{" }}4{{ "}" }}-\d{{ "{" }}2{{ "}" }}-\d{{ "{" }}2{{
+                "}"
+              }}_.+$ để tìm file bắt đầu bằng định dạng ngày tháng
+            </small>
           </div>
         </div>
 
