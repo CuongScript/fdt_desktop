@@ -13,4 +13,35 @@ contextBridge.exposeInMainWorld('electronAPI', {
   readLogs: () => ipcRenderer.invoke('read-logs'),
   selectDirectory: (title: string) =>
     ipcRenderer.invoke('select-directory', title),
+
+  // New methods for tray and auto-start settings
+  getSettings: () => ipcRenderer.invoke('get-settings'),
+  saveSettings: (settings: any) =>
+    ipcRenderer.invoke('save-settings', settings),
+  toggleAutoStart: (enabled: boolean) =>
+    ipcRenderer.invoke('toggle-autostart', enabled),
+
+  // Event listeners for IPC events from main process
+  onNavigateTo: (callback: (route: string) => void) => {
+    ipcRenderer.on('navigate-to', (_event, route) => callback(route));
+    return () => {
+      ipcRenderer.removeAllListeners('navigate-to');
+    };
+  },
+
+  onMonitoringStatusChanged: (callback: (isMonitoring: boolean) => void) => {
+    ipcRenderer.on('monitoring-status-changed', (_event, isMonitoring) =>
+      callback(isMonitoring)
+    );
+    return () => {
+      ipcRenderer.removeAllListeners('monitoring-status-changed');
+    };
+  },
+
+  onScanCompleted: (callback: () => void) => {
+    ipcRenderer.on('scan-completed', () => callback());
+    return () => {
+      ipcRenderer.removeAllListeners('scan-completed');
+    };
+  },
 });

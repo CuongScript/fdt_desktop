@@ -1,0 +1,48 @@
+<div class="settings-container">
+  <h2>Cài Đặt Ứng Dụng</h2>
+
+  <div class="setting-group">
+    <div class="setting-row">
+      <label class="setting-label">
+        <span>Thu Nhỏ Vào Khay Hệ Thống</span>
+        <div class="setting-description">
+          Khi bật, ứng dụng sẽ thu nhỏ vào khay hệ thống thay vì đóng lại khi
+          bạn nhấn nút X.
+        </div>
+      </label>
+      <div class="setting-control">
+        <label class="toggle-switch">
+          <input
+            type="checkbox"
+            [checked]="settings.minimizeToTray"
+            (change)="toggleMinimizeToTray()"
+          />
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="setting-row">
+      <label class="setting-label">
+        <span>Chạy Khi Khởi Động Windows</span>
+        <div class="setting-description">
+          Khi bật, ứng dụng sẽ tự động khởi động khi bạn đăng nhập vào Windows.
+        </div>
+      </label>
+      <div class="setting-control">
+        <label class="toggle-switch">
+          <input
+            type="checkbox"
+            [checked]="settings.runOnStartup"
+            (change)="toggleRunOnStartup()"
+          />
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="save-message" *ngIf="saveMessage">
+    {{ saveMessage }}
+  </div>
+</div>

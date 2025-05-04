@@ -1,6 +1,13 @@
-import { Component, ElementRef, NgZone, Renderer2 } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  NgZone,
+  Renderer2,
+  OnInit,
+  OnDestroy,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { Subscription } from 'rxjs';
 import { ElectronService } from '../../services/electron.service';
 
 @Component({
@@ -10,8 +17,9 @@ import { ElectronService } from '../../services/electron.service';
   templateUrl: './controls.component.html',
   styleUrls: ['./controls.component.scss'],
 })
-export class ControlsComponent {
+export class ControlsComponent implements OnInit, OnDestroy {
   isMonitoring = false;
+  private subscription: Subscription = new Subscription();
 
   constructor(
     private electronService: ElectronService,
@@ -19,6 +27,34 @@ export class ControlsComponent {
     private el: ElementRef,
     private zone: NgZone
   ) {}
+
+  ngOnInit(): void {
+    // Subscribe to monitoring status changes from tray actions
+    this.subscription.add(
+      this.electronService.monitoringStatusChanged$.subscribe(
+        (isMonitoring) => {
+          this.isMonitoring = isMonitoring;
+          this.showMessage(
+            isMonitoring
+              ? 'Đã bắt đầu giám sát real-time'
+              : 'Đã dừng giám sát real-time'
+          );
+        }
+      )
+    );
+
+    // Subscribe to scan completed notifications from tray actions
+    this.subscription.add(
+      this.electronService.scanCompleted$.subscribe(() => {
+        this.showMessage('Đã hoàn thành quét thủ công');
+      })
+    );
+  }
+
+  ngOnDestroy(): void {
+    // Clean up subscriptions when component is destroyed
+    this.subscription.unsubscribe();
+  }
 
   async startMonitor(): Promise<void> {
     try {
