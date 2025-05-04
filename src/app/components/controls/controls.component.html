@@ -1,0 +1,44 @@
+<div class="controls-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Điều Khiển Giám Sát</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="controls-buttons">
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="isMonitoring"
+          (click)="startMonitor()"
+        >
+          <mat-icon>play_arrow</mat-icon>
+          Bắt Đầu Giám Sát
+        </button>
+
+        <button
+          mat-raised-button
+          color="warn"
+          [disabled]="!isMonitoring"
+          (click)="stopMonitor()"
+        >
+          <mat-icon>stop</mat-icon>
+          Dừng Giám Sát
+        </button>
+
+        <button mat-raised-button color="accent" (click)="scanAll()">
+          <mat-icon>search</mat-icon>
+          Quét Thủ Công
+        </button>
+      </div>
+
+      <div class="status-indicator">
+        <div class="status-badge" [class.active]="isMonitoring">
+          <mat-icon>{{
+            isMonitoring ? "radio_button_checked" : "radio_button_unchecked"
+          }}</mat-icon>
+          <span>{{ isMonitoring ? "Đang giám sát" : "Đã dừng giám sát" }}</span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

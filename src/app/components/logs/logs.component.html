@@ -1,0 +1,22 @@
+<div class="logs-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Nhật Ký Hệ Thống</mat-card-title>
+      <span class="spacer"></span>
+      <button
+        mat-icon-button
+        color="primary"
+        (click)="refreshLogs()"
+        title="Làm mới"
+      >
+        <mat-icon>refresh</mat-icon>
+      </button>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="logs-content">
+        <pre *ngIf="logs">{{ logs }}</pre>
+        <div class="empty-logs" *ngIf="!logs">Chưa có nhật ký</div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
