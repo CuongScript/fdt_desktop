@@ -45,12 +45,23 @@ if (process.env.NODE_ENV === 'production') {
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
-    extraResource: [path.resolve(__dirname, '../dist/fdt_desktop')],
-    icon: path.resolve(__dirname, 'assets/app-logo'),
+    extraResource: [
+      path.resolve(__dirname, '../dist/fdt_desktop/browser'),
+      path.resolve(__dirname, 'assets'), // Include full assets directory
+    ],
+    // Explicitly define what files to include from the Angular output
+    ignore: [
+      /node_modules/,
+      /\.git/,
+      /\.vscode/,
+    ],
   },
   rebuildConfig: {},
   makers: [
-    new MakerSquirrel({}),
+    new MakerSquirrel({
+      name: 'fdt_installer',
+      setupExe: 'fdt installer.exe',
+    }),
     new MakerZIP({}, ['darwin']),
     new MakerRpm({}),
     new MakerDeb({}),

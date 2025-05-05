@@ -1,12 +1,25 @@
 import { Routes } from '@angular/router';
-import { RulesComponent } from './components/rules/rules.component';
-import { LogsComponent } from './components/logs/logs.component';
-import { SettingsComponent } from './components/settings/settings.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'rules', pathMatch: 'full' },
-  { path: 'rules', component: RulesComponent },
-  { path: 'logs', component: LogsComponent },
-  { path: 'settings', component: SettingsComponent },
+  {
+    path: 'rules',
+    loadComponent: () =>
+      import('./components/rules/rules.component').then(
+        (m) => m.RulesComponent
+      ),
+  },
+  {
+    path: 'logs',
+    loadComponent: () =>
+      import('./components/logs/logs.component').then((m) => m.LogsComponent),
+  },
+  {
+    path: 'settings',
+    loadComponent: () =>
+      import('./components/settings/settings.component').then(
+        (m) => m.SettingsComponent
+      ),
+  },
   { path: '**', redirectTo: 'rules' },
 ];

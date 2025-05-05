@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>EVNGENCO2 File Monitor</title>
-    <base href="/" />
+    <base href="./" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link
@@ -14,6 +14,15 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <script>
+      // Fix path issues in Electron for loading local assets
+      if (window.process && window.process.type === 'renderer') {
+        const baseElement = document.querySelector('base');
+        if (baseElement) {
+          baseElement.href = './';
+        }
+      }
+    </script>
   </head>
   <body class="mat-typography">
     <app-root></app-root>

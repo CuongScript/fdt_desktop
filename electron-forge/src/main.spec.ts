@@ -2,7 +2,6 @@ import { app, BrowserWindow, ipcMain, dialog, Tray, Menu } from 'electron';
 import path from 'node:path';
 import fs from 'fs';
 import * as fileLogic from './file-logic';
-import * as sinon from 'sinon';
 import { loadSettings, saveSettings, toggleAutoStart } from './main';
 
 // Mock the electron modules
@@ -24,10 +23,11 @@ jest.mock('electron', () => {
     webContents: mockWebContents,
   }));
 
-  mockBrowserWindow.getAllWindows = jest.fn().mockReturnValue([]);
-  mockBrowserWindow.fromWebContents = jest
-    .fn()
-    .mockReturnValue({ mock: 'window' });
+  (mockBrowserWindow as any).getAllWindows = jest.fn().mockReturnValue([]);
+
+  (mockBrowserWindow as any).fromWebContents = jest.fn().mockReturnValue(
+    { mock: 'window' }
+  );
 
   return {
     app: {
@@ -101,7 +101,6 @@ jest.mock('fs', () => ({
 }));
 
 // Use path.normalize to handle path separators correctly on any platform
-const normalizePath = (p) => path.normalize(p);
 
 describe('Main Process Functions', () => {
   beforeEach(() => {
@@ -296,9 +295,7 @@ describe('Main Process Functions', () => {
       const mockEvent = { sender: { mock: 'webContents' } };
 
       const result = await dialog.showOpenDialog(
-        {
-          mock: 'window',
-        },
+        new BrowserWindow() as any,
         {
           title: 'Select Test Folder',
           properties: ['openDirectory', 'createDirectory'],
@@ -316,7 +313,7 @@ describe('Main Process Functions', () => {
         filePaths: [],
       });
 
-      const result = await dialog.showOpenDialog({ mock: 'window' }, {});
+      const result = await dialog.showOpenDialog(new BrowserWindow() as any, {});
 
       expect(result.canceled).toBe(true);
     });

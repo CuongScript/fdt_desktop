@@ -1,8 +1,8 @@
 {
-  "name": "electron-forge",
-  "productName": "electron-forge",
+  "name": "evngenco2-file-monitor",
+  "productName": "EVNGENCO2 File Monitor",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "File monitoring and transfer application for EVNGENCO2",
   "main": ".vite/build/main.js",
   "scripts": {
     "start": "electron-forge start",

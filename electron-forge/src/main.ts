@@ -21,12 +21,31 @@ declare global {
   }
 }
 
+// Enhanced debugging for production issues
+function logDebug(...args: any[]) {
+  const logFile = path.join(app.getPath('userData'), 'debug-log.txt');
+  const message = `[${new Date().toISOString()}] ${args
+    .map((arg) => (typeof arg === 'object' ? JSON.stringify(arg) : arg))
+    .join(' ')}`;
+  console.log(message);
+
+  try {
+    fs.appendFileSync(logFile, message + '\n');
+  } catch (err) {
+    console.error('Failed to write to debug log:', err);
+  }
+}
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (started) {
   app.quit();
 }
 
-const isDev = process.env.NODE_ENV !== 'production';
+// Improved environment detection logic
+const isDev = !app.isPackaged && process.env.NODE_ENV !== 'production';
+logDebug('App starting in mode:', isDev ? 'development' : 'production');
+logDebug('App is packaged:', app.isPackaged);
+logDebug('NODE_ENV:', process.env.NODE_ENV || 'not set');
 
 // Added global variables for tray and main window
 let mainWindow: BrowserWindow | null = null;
@@ -49,7 +68,7 @@ function loadSettings() {
       return { ...DEFAULT_SETTINGS, ...JSON.parse(data) };
     }
   } catch (error) {
-    console.error('Error loading settings:', error);
+    logDebug('Error loading settings:', error);
   }
   return DEFAULT_SETTINGS;
 }
@@ -60,7 +79,7 @@ function saveSettings(settings: any) {
     fs.writeFileSync(SETTINGS_FILE, JSON.stringify(settings, null, 2));
     return settings;
   } catch (error) {
-    console.error('Error saving settings:', error);
+    logDebug('Error saving settings:', error);
     return null;
   }
 }
@@ -100,7 +119,7 @@ function toggleAutoStart(enabled: boolean) {
       saveSettings(settings);
       return true;
     } catch (error) {
-      console.error('Error setting auto-start:', error);
+      logDebug('Error setting auto-start:', error);
       return false;
     }
   }
@@ -108,17 +127,21 @@ function toggleAutoStart(enabled: boolean) {
 }
 
 const createWindow = () => {
+  // Log app paths for debugging
+  logDebug('App directory:', __dirname);
+  logDebug('Working directory:', process.cwd());
+  logDebug('App path:', app.getAppPath());
+  logDebug('User data path:', app.getPath('userData'));
+  logDebug('Executable path:', app.getPath('exe'));
+
   // Find the right path to the app logo
   let iconPath = '';
   const possiblePaths = [
-    // Original asset folder
-    path.join(__dirname, '../assets/app-logo.png'),
-    // Production path
+    // Production paths
+
+    path.join(process.resourcesPath, 'assets', 'app-logo.png'),
+
     path.resolve(__dirname, '../../assets/app-logo.png'),
-    // Dev with Vite path
-    path.join(__dirname, '../app-logo.png'),
-    // Direct project root path as fallback
-    path.resolve(process.cwd(), 'electron-forge/assets/app-logo.png'),
   ];
 
   // Find the first path that exists
@@ -126,16 +149,18 @@ const createWindow = () => {
     try {
       if (fs.existsSync(p)) {
         iconPath = p;
-        console.log('Found icon at:', p);
+        logDebug('Found icon at:', p);
         break;
+      } else {
+        logDebug('Icon not found at:', p);
       }
     } catch (err) {
-      // Continue checking other paths
+      logDebug('Error checking icon path:', p, err);
     }
   }
 
   if (!iconPath) {
-    console.error('Could not find app-logo.png in any expected location');
+    logDebug('Could not find app-logo.png in any expected location');
     // Use a default icon path as fallback
     iconPath = path.resolve(
       process.cwd(),
@@ -143,10 +168,10 @@ const createWindow = () => {
     );
   }
 
-  console.log('App icon path:', iconPath);
+  logDebug('App icon path:', iconPath);
 
   const appIcon = nativeImage.createFromPath(iconPath);
-  console.log('App icon created:', appIcon.isEmpty() ? 'empty' : 'loaded');
+  logDebug('App icon created:', appIcon.isEmpty() ? 'empty' : 'loaded');
 
   // Create the browser window.
   mainWindow = new BrowserWindow({
@@ -154,16 +179,87 @@ const createWindow = () => {
     height: 900,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: false,
+      contextIsolation: true,
     },
     icon: iconPath,
+    show: false, // Don't show until ready-to-show
+  });
+
+  // Create a loading screen
+  mainWindow.once('ready-to-show', () => {
+    mainWindow?.show();
+    logDebug('Main window ready to show');
+  });
+
+  // Open DevTools in production to debug
+  if (!isDev) {
+    logDebug('Opening DevTools in production for debugging');
+    mainWindow.webContents.openDevTools(); // Actually open DevTools to debug issues
+  }
+
+  // Handle page load errors
+  mainWindow.webContents.on(
+    'did-fail-load',
+    (event, errorCode, errorDescription) => {
+      logDebug('Page failed to load:', errorCode, errorDescription);
+    }
+  );
+
+  // Log content load
+  mainWindow.webContents.on('did-finish-load', () => {
+    logDebug('Content finished loading');
+  });
+
+  // Add handlers for resource loading errors to debug CSS/JS loading issues
+  mainWindow.webContents.on('did-fail-load-resource', (event, details) => {
+    logDebug('Failed to load resource:', details.url, details.reason);
   });
 
   if (isDev) {
+    logDebug('Loading development URL: http://localhost:4200');
     mainWindow.loadURL('http://localhost:4200');
   } else {
-    mainWindow.loadFile(
-      path.join(__dirname, '../../dist/fdt_desktop/browser/index.html')
-    );
+    // In production mode - try multiple possible paths to load the Angular app
+    const possibleHtmlPaths = [
+      // Path when running from packaged app
+      path.join(process.resourcesPath, 'dist/fdt_desktop/browser/index.html'),
+      path.join(process.resourcesPath, 'browser/index.html'),
+      // Fallback paths
+      path.join(app.getAppPath(), '../dist/fdt_desktop/browser/index.html'),
+      path.join(__dirname, '../../dist/fdt_desktop/browser/index.html'),
+    ];
+
+    logDebug('Trying to locate HTML file in these paths:', possibleHtmlPaths);
+    
+    let htmlPathFound = false;
+
+    for (const htmlPath of possibleHtmlPaths) {
+      try {
+        if (fs.existsSync(htmlPath)) {
+          logDebug('Found HTML file at:', htmlPath);
+          
+          // For loading from file protocol, we need to ensure the base path is set correctly
+          const baseUrl = `file://${htmlPath}`;
+          logDebug('Loading HTML with URL:', baseUrl);
+          
+          mainWindow.loadFile(htmlPath);
+          htmlPathFound = true;
+          break;
+        } else {
+          logDebug('HTML file not found at:', htmlPath);
+        }
+      } catch (err) {
+        logDebug('Error checking HTML path:', htmlPath, err);
+      }
+    }
+
+    if (!htmlPathFound) {
+      logDebug('Could not find index.html in any expected location');
+      mainWindow.loadFile(
+        path.join(__dirname, '../../dist/fdt_desktop/browser/index.html')
+      );
+    }
   }
 
   // Create tray icon using the same icon file
@@ -271,9 +367,8 @@ const createWindow = () => {
   });
 
   // Handle minimize event
-  mainWindow.on('minimize', (event) => {
+  mainWindow.on('minimize', () => {
     if (settings.minimizeToTray) {
-      event.preventDefault();
       mainWindow?.hide();
     }
   });
@@ -296,8 +391,28 @@ app.on('window-all-closed', () => {
 
 // Add this handler to ensure app quits properly when requested
 app.on('before-quit', () => {
+  logDebug('Application is quitting...');
   app.isQuitting = true; // Mark that we're quitting to avoid minimizing to tray
   unwatchAll(); // Ensure all file watchers are closed
+
+  // Close any open file handles
+  try {
+    // Give some time for resources to be released
+    if (mainWindow && !mainWindow.isDestroyed()) {
+      mainWindow.webContents.session.clearCache();
+      mainWindow.webContents.session.clearStorageData();
+    }
+
+    // Close tray if it exists
+    if (tray) {
+      tray.destroy();
+      tray = null;
+    }
+
+    logDebug('Resources released successfully');
+  } catch (error) {
+    logDebug('Error releasing resources:', error);
+  }
 });
 
 app.on('activate', () => {
@@ -323,9 +438,14 @@ ipcMain.handle('delete-rule', (_e, index: number) => {
 ipcMain.handle('start-monitor', () => watchFiles(cfg.rules));
 ipcMain.handle('stop-monitor', () => unwatchAll());
 ipcMain.handle('scan-all', () => scanAll(cfg.rules));
-ipcMain.handle('read-logs', () =>
-  require('fs').readFileSync(path.join(process.cwd(), 'logs.txt'), 'utf-8')
-);
+ipcMain.handle('read-logs', () => {
+  try {
+    return fs.readFileSync(path.join(process.cwd(), 'logs.txt'), 'utf-8');
+  } catch (err) {
+    logDebug('Error reading logs:', err);
+    return 'Error loading logs. See debug-log.txt for details.';
+  }
+});
 
 // New IPC handlers for app settings
 ipcMain.handle('get-settings', () => settings);

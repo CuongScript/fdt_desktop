@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import mock from 'mock-fs';
+
 import {
   loadConfig,
   watchFiles,
