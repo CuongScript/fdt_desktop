@@ -30,6 +30,8 @@ export class RulesComponent implements OnInit {
     source: new FormControl('', [Validators.required]),
     destination: new FormControl('', [Validators.required]),
     pattern: new FormControl('', [Validators.required]),
+    createSubfolders: new FormControl(false),
+    operation: new FormControl('copy'),
   });
 
   constructor(
@@ -88,11 +90,16 @@ export class RulesComponent implements OnInit {
         source: this.ruleForm.value.source as string,
         destination: this.ruleForm.value.destination as string,
         pattern: this.ruleForm.value.pattern as string,
+        createSubfolders: this.ruleForm.value.createSubfolders as boolean,
+        operation: this.ruleForm.value.operation as 'copy' | 'move',
       };
 
       try {
         this.rules = await this.electronService.addRule(rule);
-        this.ruleForm.reset();
+        this.ruleForm.reset({
+          createSubfolders: false,
+          operation: 'copy',
+        });
         this.showMessage('Đã thêm quy tắc mới');
       } catch (error) {
         this.showMessage('Không thể thêm quy tắc');

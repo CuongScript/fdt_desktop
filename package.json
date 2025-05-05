@@ -8,7 +8,8 @@
     "package": "npm run build:angular && cd electron-forge && cross-env NODE_ENV=production electron-forge package",
     "make": "npm run build:angular && cd electron-forge && cross-env NODE_ENV=production electron-forge make",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "test:electron": "jest"
   },
   "private": true,
   "dependencies": {
@@ -31,15 +32,24 @@
     "@angular-devkit/build-angular": "^19.2.3",
     "@angular/cli": "^19.2.3",
     "@angular/compiler-cli": "^19.2.0",
+    "@electron-forge/cli": "^7.8.0",
     "@types/jasmine": "~5.1.0",
+    "@types/jest": "^29.5.14",
+    "chai": "^5.2.0",
     "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
+    "electron-mocha": "^13.1.0",
     "jasmine-core": "~5.6.0",
+    "jest": "^29.7.0",
+    "jest-mock-extended": "^4.0.0-beta1",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "mock-fs": "^5.5.0",
+    "sinon": "^20.0.0",
+    "ts-jest": "^29.3.2",
     "typescript": "~5.7.2"
   }
 }

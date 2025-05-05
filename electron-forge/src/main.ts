@@ -108,6 +108,46 @@ function toggleAutoStart(enabled: boolean) {
 }
 
 const createWindow = () => {
+  // Find the right path to the app logo
+  let iconPath = '';
+  const possiblePaths = [
+    // Original asset folder
+    path.join(__dirname, '../assets/app-logo.png'),
+    // Production path
+    path.resolve(__dirname, '../../assets/app-logo.png'),
+    // Dev with Vite path
+    path.join(__dirname, '../app-logo.png'),
+    // Direct project root path as fallback
+    path.resolve(process.cwd(), 'electron-forge/assets/app-logo.png'),
+  ];
+
+  // Find the first path that exists
+  for (const p of possiblePaths) {
+    try {
+      if (fs.existsSync(p)) {
+        iconPath = p;
+        console.log('Found icon at:', p);
+        break;
+      }
+    } catch (err) {
+      // Continue checking other paths
+    }
+  }
+
+  if (!iconPath) {
+    console.error('Could not find app-logo.png in any expected location');
+    // Use a default icon path as fallback
+    iconPath = path.resolve(
+      process.cwd(),
+      'electron-forge/assets/app-logo.png'
+    );
+  }
+
+  console.log('App icon path:', iconPath);
+
+  const appIcon = nativeImage.createFromPath(iconPath);
+  console.log('App icon created:', appIcon.isEmpty() ? 'empty' : 'loaded');
+
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 900,
@@ -115,6 +155,7 @@ const createWindow = () => {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
+    icon: iconPath,
   });
 
   if (isDev) {
@@ -125,13 +166,25 @@ const createWindow = () => {
     );
   }
 
-  // Create tray icon
-  const iconPath = path.join(
-    __dirname,
-    isDev ? '../assets' : '../../assets',
-    'tray-icon.svg'
-  );
-  const trayIcon = nativeImage.createFromPath(iconPath);
+  // Create tray icon using the same icon file
+  let trayIcon;
+  if (!appIcon.isEmpty()) {
+    trayIcon = appIcon;
+    if (process.platform === 'win32') {
+      trayIcon = trayIcon.resize({ width: 16, height: 16 });
+    } else if (process.platform === 'darwin') {
+      trayIcon.setTemplateImage(true);
+    }
+  } else {
+    // Fallback to creating a new native image if appIcon is empty
+    trayIcon = nativeImage.createFromPath(iconPath);
+    if (process.platform === 'win32') {
+      trayIcon = trayIcon.resize({ width: 16, height: 16 });
+    } else if (process.platform === 'darwin') {
+      trayIcon.setTemplateImage(true);
+    }
+  }
+
   tray = new Tray(trayIcon);
 
   // Function to update tray context menu
@@ -301,3 +354,6 @@ ipcMain.handle('select-directory', async (event, title: string) => {
 
   return filePaths[0];
 });
+
+// Export functions for testing purposes
+export { loadSettings, saveSettings, toggleAutoStart };

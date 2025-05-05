@@ -6,6 +6,8 @@ export interface Rule {
   source: string;
   destination: string;
   pattern: string;
+  createSubfolders?: boolean;
+  operation?: 'copy' | 'move'; // Added operation type
 }
 
 export interface Config {
@@ -60,12 +62,69 @@ function processFile(fullPath: string, rules: Rule[]): void {
 
     for (const rule of rules) {
       try {
-        if (new RegExp(rule.pattern).test(fileName)) {
-          const destPath = path.join(rule.destination, fileName);
-          fs.copyFileSync(fullPath, destPath);
-          logAction(
-            `[${rule.source}→${rule.destination}] '${fileName}' (regex='${rule.pattern}')`
-          );
+        const regex = new RegExp(rule.pattern);
+        const match = regex.test(fileName);
+
+        if (match) {
+          let destPathBase = rule.destination;
+
+          // Extract subfolder name from regex match if enabled
+          if (rule.createSubfolders) {
+            // Create a subfolder based on regex match
+            const matches = fileName.match(regex);
+            if (matches && matches.length > 0) {
+              // If there's a capturing group in the regex (matches[1]), use that
+              // Otherwise use the whole matched portion (matches[0])
+              const subfolderName =
+                matches[1] || matches[0].match(/([^-]+)/)?.[1] || matches[0];
+
+              // Use the capture group directly as the folder name
+              let folderName = subfolderName;
+
+              // Create the subfolder
+              const subfolderPath = path.join(destPathBase, folderName);
+
+              if (!fs.existsSync(subfolderPath)) {
+                fs.mkdirSync(subfolderPath, { recursive: true });
+                logAction(`Đã tạo thư mục con: ${subfolderPath}`);
+              }
+
+              destPathBase = subfolderPath;
+            }
+          }
+
+          // Destination path (either original or with subfolder)
+          const destPath = path.join(destPathBase, fileName);
+
+          // Determine operation: copy or move
+          const operation = rule.operation || 'copy'; // Default to copy if not specified
+
+          if (operation === 'copy') {
+            // Copy the file
+            fs.copyFileSync(fullPath, destPath);
+            logAction(
+              `[COPY ${rule.source}→${destPathBase}] '${fileName}' (regex='${
+                rule.pattern
+              }'${
+                rule.createSubfolders
+                  ? `, subfolder=${path.basename(destPathBase)}`
+                  : ''
+              })`
+            );
+          } else if (operation === 'move') {
+            // Move the file (copy then delete original)
+            fs.copyFileSync(fullPath, destPath);
+            fs.unlinkSync(fullPath);
+            logAction(
+              `[MOVE ${rule.source}→${destPathBase}] '${fileName}' (regex='${
+                rule.pattern
+              }'${
+                rule.createSubfolders
+                  ? `, subfolder=${path.basename(destPathBase)}`
+                  : ''
+              })`
+            );
+          }
         } else {
           logAction(
             `(bỏ qua) '${fileName}' không khớp regex='${rule.pattern}'`

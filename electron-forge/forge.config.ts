@@ -46,6 +46,7 @@ const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
     extraResource: [path.resolve(__dirname, '../dist/fdt_desktop')],
+    icon: path.resolve(__dirname, 'assets/app-logo'),
   },
   rebuildConfig: {},
   makers: [

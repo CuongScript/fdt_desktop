@@ -1,108 +1,56 @@
-2025-05-04 15:46:09  Bắt đầu quét thủ công...
-2025-05-04 15:46:09  Hoàn thành quét thủ công.
-2025-05-04 15:57:15  Bắt đầu giám sát thư mục: D:\Downloads
-2025-05-04 15:58:06  Bắt đầu quét thủ công...
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:06  Hoàn thành quét thủ công.
-2025-05-04 15:58:10  Bắt đầu quét thủ công...
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:10  Hoàn thành quét thủ công.
-2025-05-04 15:58:11  Bắt đầu quét thủ công...
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:11  Hoàn thành quét thủ công.
-2025-05-04 15:58:12  Bắt đầu quét thủ công...
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Hoàn thành quét thủ công.
-2025-05-04 15:58:12  Bắt đầu quét thủ công...
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Lỗi regex '*\.pdf': SyntaxError: Invalid regular expression: /*\.pdf/: Nothing to repeat
-2025-05-04 15:58:12  Hoàn thành quét thủ công.
-2025-05-04 16:10:26  Bắt đầu giám sát thư mục: D:\Downloads
-2025-05-04 16:11:02  (bỏ qua) 'New folder' không khớp regex='\.pdf$'
-2025-05-04 16:11:04  (bỏ qua) 'test1' không khớp regex='\.pdf$'
-2025-05-04 16:11:42  Bắt đầu giám sát thư mục: D:\Downloads\test1
-2025-05-04 16:11:50  [D:\Downloads\test1→D:\Downloads\test] 'App Form - Credit Transfer.pdf' (regex='\.pdf$')
+2025-05-05 07:05:24  Bắt đầu quét thủ công...
+2025-05-05 07:05:24  Thư mục không tồn tại: D:\Downloads
+2025-05-05 07:05:24  Hoàn thành quét thủ công.
+2025-05-05 07:05:25  Bắt đầu quét thủ công...
+2025-05-05 07:05:25  Thư mục không tồn tại: D:\Downloads
+2025-05-05 07:05:25  Hoàn thành quét thủ công.
+2025-05-05 07:05:28  Thư mục không tồn tại: D:\Downloads
+2025-05-05 07:07:30  Thư mục không tồn tại: D:\Downloads
+2025-05-05 07:07:30  Bắt đầu giám sát thư mục: D:\CuongDownload
+2025-05-05 07:07:31  Bắt đầu quét thủ công...
+2025-05-05 07:07:31  Thư mục không tồn tại: D:\Downloads
+2025-05-05 07:07:31  (bỏ qua) '02 DE BAI TAP THUC HANH LAP TRINH - CNTT.doc' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:31  Đã tạo thư mục con: D:\CuongDownload\test\nightly-windows-amd64
+2025-05-05 07:07:31  [MOVE D:\CuongDownload→D:\CuongDownload\test\nightly-windows-amd64] 'act_runner-nightly-windows-amd64.exe' (regex='.*_(\w+)-.+', subfolder=nightly-windows-amd64)
+2025-05-05 07:07:31  (bỏ qua) 'BraveBrowserSetup-BRV010.exe' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:31  (bỏ qua) 'Cam ket bao mat an toan thong tin trong EVNICT 2024 (1).doc' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:31  (bỏ qua) 'Cam-ket-bao-mat-an-toan-thong-tin-trong-EVNICT-2024.doc' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:31  (bỏ qua) 'CapstoneProject_CompletionPlan_GraduGlorious.pdf' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:31  (bỏ qua) 'CCDC_ALT_202503312017.sql' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:31  (bỏ qua) 'CCDC_DEV_202502122139.sql' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:31  (bỏ qua) 'CCDC_DEV_202503271940.sql' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:31  (bỏ qua) 'CCDC_DEV_main.sql' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:31  (bỏ qua) 'dangkyVPN linhnq.docx' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:31  Đã tạo thư mục con: D:\CuongDownload\test\1123
+2025-05-05 07:07:31  [MOVE D:\CuongDownload→D:\CuongDownload\test\1123] 'ddddd_Hello-1123.docx' (regex='.*_(\w+)-.+', subfolder=1123)
+2025-05-05 07:07:31  Đã tạo thư mục con: D:\CuongDownload\test\123
+2025-05-05 07:07:32  [MOVE D:\CuongDownload→D:\CuongDownload\test\123] 'dddd_CUONG-123.doc' (regex='.*_(\w+)-.+', subfolder=123)
+2025-05-05 07:07:32  (bỏ qua) 'design-patterns-en.pdf' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'desktop.ini' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'DevartdbForgeStudio2022forSQLServer6.5.140.r.taiwebs.com.zip' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'DevExpressUniversalTrialSetup-20241212.exe' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'dotnet-hosting-9.0.3-win.exe' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'dotnet-sdk-8.0.407-win-x64.exe' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'dotnetcommand.txt' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'EAM_DEV_202504111702.sql' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'EAM_DEV_202504122113.sql' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'EAM_DEV_202504181836.sql' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'giamsatvadieukhien.component.ts' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'GlobalProtect64.msi' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'HoáĐơnCôngTác.zip' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'localhost_4200_quantri_user.png.crdownload' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'mau-thong-bao-thay-doi-thoi-gian-trich-khau-hao-tai-san-co-dinh.pdf' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'mqtt.service.ts' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'SuaChuaLonDB_202504021657.sql' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'tk.xlsx' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'webApp.rar' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) '[anawork] User guide-Workflow.pdf' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) '~$ RMIT Internship Agreement - VIE 33.docx' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  (bỏ qua) 'Đơn-xin-thực-tập-EVNICT.doc' không khớp regex='.*_(\w+)-.+'
+2025-05-05 07:07:32  Hoàn thành quét thủ công.
+2025-05-05 07:11:52  Bắt đầu giám sát thư mục: D:\CuongDownload
+2025-05-05 07:12:10  Đã tạo thư mục con: D:\CuongDownload\test1\1123
+2025-05-05 07:12:10  [MOVE D:\CuongDownload→D:\CuongDownload\test1\1123] 'ddddd_Hello-1123.docx' (regex='.*_([^-]+)-.+', subfolder=1123)
+2025-05-05 07:42:24  Bắt đầu giám sát thư mục: D:\CuongDownload
+2025-05-05 07:42:33  Đã tạo thư mục con: D:\CuongDownload\test1\Hello
+2025-05-05 07:42:33  [MOVE D:\CuongDownload→D:\CuongDownload\test1\Hello] 'ddddd_Hello-1123.docx' (regex='.*_([^-]+)-.+', subfolder=Hello)

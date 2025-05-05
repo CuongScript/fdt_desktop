@@ -6,6 +6,8 @@ export interface Rule {
   source: string;
   destination: string;
   pattern: string;
+  createSubfolders?: boolean;
+  operation?: 'copy' | 'move'; // New field to specify operation type
 }
 
 export interface AppSettings {

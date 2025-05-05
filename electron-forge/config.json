@@ -1,9 +1,11 @@
 {
   "rules": [
     {
-      "source": "D:\\Downloads\\test1",
-      "destination": "D:\\Downloads\\test",
-      "pattern": "\\.pdf$"
+      "source": "D:\\CuongDownload",
+      "destination": "D:\\CuongDownload\\test1",
+      "pattern": ".*_([^-]+)-.+",
+      "createSubfolders": true,
+      "operation": "move"
     }
   ]
 }
