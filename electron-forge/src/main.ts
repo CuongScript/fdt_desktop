@@ -193,10 +193,10 @@ const createWindow = () => {
   });
 
   // Open DevTools in production to debug
-  if (!isDev) {
-    logDebug('Opening DevTools in production for debugging');
-    mainWindow.webContents.openDevTools(); // Actually open DevTools to debug issues
-  }
+  // if (!isDev) {
+  //   // logDebug('Opening DevTools in production for debugging');
+  //   // mainWindow.webContents.openDevTools(); // Actually open DevTools to debug issues
+  // }
 
   // Handle page load errors
   mainWindow.webContents.on(
@@ -211,10 +211,6 @@ const createWindow = () => {
     logDebug('Content finished loading');
   });
 
-  // Add handlers for resource loading errors to debug CSS/JS loading issues
-  mainWindow.webContents.on('did-fail-load-resource', (event, details) => {
-    logDebug('Failed to load resource:', details.url, details.reason);
-  });
 
   if (isDev) {
     logDebug('Loading development URL: http://localhost:4200');
@@ -231,18 +227,18 @@ const createWindow = () => {
     ];
 
     logDebug('Trying to locate HTML file in these paths:', possibleHtmlPaths);
-    
+
     let htmlPathFound = false;
 
     for (const htmlPath of possibleHtmlPaths) {
       try {
         if (fs.existsSync(htmlPath)) {
           logDebug('Found HTML file at:', htmlPath);
-          
+
           // For loading from file protocol, we need to ensure the base path is set correctly
           const baseUrl = `file://${htmlPath}`;
           logDebug('Loading HTML with URL:', baseUrl);
-          
+
           mainWindow.loadFile(htmlPath);
           htmlPathFound = true;
           break;

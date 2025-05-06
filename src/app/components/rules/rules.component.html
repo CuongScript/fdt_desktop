@@ -149,19 +149,58 @@
               .*\.pdf để tìm file PDF<br />
               .*\.jpe?g để tìm file JPEG/JPG<br />
               .*\.png để tìm file PNG<br />
-              .*\.docx? để tìm file DOC/DOCX<br />
-              .*\.xlsx? để tìm file XLS/XLSX<br />
-              .*_backup_.* để tìm file có chứa '_backup_'<br />
-              ^IMG_\d{{ "{" }}4{{ "}" }}\.jpg$ để tìm ảnh theo định dạng
-              IMG_XXXX.jpg<br />
-              ^data\d{{ "{" }}2{{ "}" }}_.+\.csv$ để tìm file CSV bắt đầu bằng
-              'data' và 2 số<br />
-              .+\.(zip|rar|7z)$ để tìm file nén<br />
-              ^((?!temp).)*$ để tìm file không chứa 'temp'<br />
-              ^\d{{ "{" }}4{{ "}" }}-\d{{ "{" }}2{{ "}" }}-\d{{ "{" }}2{{
-                "}"
-              }}_.+$ để tìm file bắt đầu bằng định dạng ngày tháng
             </small>
+
+            <!-- Examples for moving files with subdirectory creation -->
+            <div class="mt-3 pt-2 border-top">
+              <h6>Ví dụ di chuyển file với tạo thư mục con:</h6>
+              <div class="example-box p-2 mb-2 bg-light rounded">
+                <div class="row">
+                  <div class="col-md-3">
+                    <strong>Nguồn:</strong> C:\Data\Invoices
+                  </div>
+                  <div class="col-md-3">
+                    <strong>Đích:</strong> D:\Archive\Billing
+                  </div>
+                  <div class="col-md-3">
+                    <strong>Regex:</strong>
+                    <code>Invoice-(\d{4})-\d+\.pdf</code>
+                  </div>
+                  <div class="col-md-3">
+                    <span class="badge bg-success">Tạo thư mục con</span>
+                    <span class="badge bg-warning">Di chuyển</span>
+                  </div>
+                </div>
+                <div class="mt-2 text-muted small">
+                  <i class="bi bi-arrow-right"></i> File
+                  <code>Invoice-2025-001.pdf</code> sẽ được di chuyển vào thư
+                  mục <code>D:\Archive\Billing\2025</code>
+                </div>
+              </div>
+
+              <div class="example-box p-2 mb-2 bg-light rounded">
+                <div class="row">
+                  <div class="col-md-3">
+                    <strong>Nguồn:</strong> C:\Photos\Camera
+                  </div>
+                  <div class="col-md-3">
+                    <strong>Đích:</strong> D:\MediaLibrary\Photos
+                  </div>
+                  <div class="col-md-3">
+                    <strong>Regex:</strong> <code>IMG_(\d{8})_\d+\.jpg</code>
+                  </div>
+                  <div class="col-md-3">
+                    <span class="badge bg-success">Tạo thư mục con</span>
+                    <span class="badge bg-warning">Di chuyển</span>
+                  </div>
+                </div>
+                <div class="mt-2 text-muted small">
+                  <i class="bi bi-arrow-right"></i> File
+                  <code>IMG_20250301_123456.jpg</code> sẽ được di chuyển vào thư
+                  mục <code>D:\MediaLibrary\Photos\20250301</code>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

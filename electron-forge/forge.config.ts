@@ -50,11 +50,7 @@ const config: ForgeConfig = {
       path.resolve(__dirname, 'assets'), // Include full assets directory
     ],
     // Explicitly define what files to include from the Angular output
-    ignore: [
-      /node_modules/,
-      /\.git/,
-      /\.vscode/,
-    ],
+    ignore: [/node_modules/, /\.git/, /\.vscode/],
   },
   rebuildConfig: {},
   makers: [

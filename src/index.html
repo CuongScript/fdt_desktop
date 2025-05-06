@@ -16,10 +16,10 @@
     />
     <script>
       // Fix path issues in Electron for loading local assets
-      if (window.process && window.process.type === 'renderer') {
-        const baseElement = document.querySelector('base');
+      if (window.process && window.process.type === "renderer") {
+        const baseElement = document.querySelector("base");
         if (baseElement) {
-          baseElement.href = './';
+          baseElement.href = "./";
         }
       }
     </script>
